@@ -1,43 +1,42 @@
-function BMICalcuator() {
-    alert("Daha iyi sonuçlar için lütfen vücut bilgilerinizi doğru girin");
-    const weight = parseFloat(prompt("Kilonuzu girin (KG):"));
-    const height = parseFloat(prompt("Boyunuzu girin (M):"));
-    const BMI = weight / (height*height);
-    alert("Beden Kitle İndeksiniz (BMI): " + BMI);
+function BMICalculator() {
+    alert("Please enter your body information correctly for better results.");
+    const weight = parseFloat(prompt("Enter your weight (KG):"));
+    const height = parseFloat(prompt("Enter your height (M):"));
+    const BMI = weight / (height * height);
+    alert("Your Body Mass Index (BMI): " + BMI);
     console.log(BMI);
-    if(BMI < 18.5){
-        var weakMessage = alert("Sonuç: Zayıfsınız");
+    if (BMI < 18.5) {
+        var weakMessage = alert("Result: You are underweight.");
         console.log(weakMessage);
-    }else if(BMI > 18.5 && BMI < 25){
-        var healtyMessage = alert("Sonuç : Oldukça sağlıksınız");
-        console.log(healtyMessage);
-    }else if(BMI > 25 && BMI < 30){
-        var fatMessage = alert("Sonuç: Kilolusunuz");
-        console.log(fatMessage);
-    }else if(BMI > 30 && BMI < 35){
-        var obeseMessage1th = alert("Sonuç: 1.derece obezsiniz");
-        console.log(obeseMessage1th);
-    }else if(BMI > 35 && BMI < 40){
-        var obeseMessage2th = alert("Sonuç: 2.derece obezsiniz. Doktora Görünmelisiniz ve Spor faliyerlerini aksatmamalısınız.");
-        console.log(obeseMessage2th);
-    }else if(BMI > 35 && BMI < 40){
-        var obeseMessage3th = alert("Sonuç: 3.derece obezsiniz. Doktora Görünmelisiniz ve Spor faliyerlerini aksatmamalısınız. Durumuzun ciddi olmakla beraber tibbi müdahale gerektirebilir.");
-        console.log(obeseMessage2th);
-    }else{
-        loginErrorMessage = alert("Lütfen geçerli bir giriş yapınız.");
+    } else if (BMI > 18.5 && BMI < 25) {
+        var healthyMessage = alert("Result: You are in a healthy weight range.");
+        console.log(healthyMessage);
+    } else if (BMI > 25 && BMI < 30) {
+        var overweightMessage = alert("Result: You are overweight.");
+        console.log(overweightMessage);
+    } else if (BMI > 30 && BMI < 35) {
+        var obeseMessage1st = alert("Result: You are in the 1st degree of obesity.");
+        console.log(obeseMessage1st);
+    } else if (BMI > 35 && BMI < 40) {
+        var obeseMessage2nd = alert("Result: You are in the 2nd degree of obesity. You should see a doctor and maintain regular exercise.");
+        console.log(obeseMessage2nd);
+    } else if (BMI > 40 && BMI < 45) {
+        var obeseMessage3rd = alert("Result: You are in the 3rd degree of obesity. You should see a doctor and maintain regular exercise. The situation is serious and may require medical intervention.");
+        console.log(obeseMessage3rd);
+    } else {
+        loginErrorMessage = alert("Please enter a valid input.");
         console.log(loginErrorMessage);
     }
-  
 }
-  BMICalcuator();
-  
 
+BMICalculator();
 
-  /*
-  sonuç < 18,5 ise Zayıf
-18,5 < sonuç < 25 ise Normal
-25 < sonuç < 30 ise Fazla kilolu
-30 < sonuç < 35 ise 1. derece obez
-35 < sonuç < 40 ise 2. derece obez
-40 < sonuç < 45 ise 3. derece obez
+/*
+Result interpretation:
+If BMI < 18.5: Underweight
+If 18.5 < BMI < 25: Normal weight
+If 25 < BMI < 30: Overweight
+If 30 < BMI < 35: 1st degree of obesity
+If 35 < BMI < 40: 2nd degree of obesity
+If 40 < BMI < 45: 3rd degree of obesity
 */
